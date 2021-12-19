@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <input type="file" multiple>
+    <div></div>
+    <script>
+        var file = document.querySelector('input');
+        var div = document.querySelector('div');
+        file.onchange = function() {
+            var reader = new FileReader();
+            reader.readAsText(this.files[0]);
+            reader.onabort = function() {
+              div.innerHTML = this.result;
+            };
+        };
+    </script> 
+    19软件306<br>
+    201950131326<br>
+    梁秋            
+</body>
+</html>
